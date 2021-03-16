@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/kratuvwxyz/burger/issues"
   },
-  "homepage": "https://github.com/kratuvwxyz/burger#readme"
+  "homepage": "https://github.com/kratuvwxyz/burger#readme",
+  "dependencies": {}
 }
