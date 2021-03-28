@@ -1,12 +1,6 @@
-<li class="list-group-item d-flex justify-content-between align-items-center">
-	
-		
-	
+<li class="list-group-item d-flex align-items-center justify-content-between">
 	{{name}}
-
-	<button class="change-devoured btn btn-sm" data-id="{{id}}" data-neworder="{{devoured}}">
-		{{#if devoured}}<span class="bg-warning p-2 rounded">DINE IN!</span>{{else}}<span class="bg-success p-2 rounded">TO GO!</span>{{/if}}
-	</button>
-<button class="delete-burger btn" data-id="{{this.id}}"><span class="badge badge-danger badge-pill">x</span></button>
-
+	<span class="change-devoured" data-id="{{id}}" data-neworder="{{devoured}}">
+		{{#if devoured}}<button class="btn btn-sm btn-warning">DINE IN!</button>{{else}}<button class="btn btn-sm btn-success">TO GO!</button>{{/if}}
+	<button class="delete-burger btn btn-danger btn-sm" data-id="{{this.id}}">X</button></span>
 </li>

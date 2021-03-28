@@ -1,10 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12 p-0 mb-2">
-      <div class="jumbotron text-center border-danger border-bottom jumboBackground m-0">
-        <h1>Welcome to BurgerBar!</h1>
-        <p class="text-danger">Here we satisfy your craving with your choice of burger!</p>
-      </div>
+    <div class="col">
+      <h1>Burger Bar</h1>
+      <hr>
     </div>
   </div>
   <div class="row">
@@ -19,71 +17,62 @@
         </div>
         <br>
         <div>
-          <p>Select (one) you craving for...</p>
-            <button type="button" id="menu-1" class="btn btn-outline-secondary btn-block my-1">THE CLASSIC BURGER</button>
-            <button type="button" id="menu-2" class="btn btn-outline-secondary btn-block my-1">ELDIABLO BURGER</button>
-            <button type="button" id="menu-3" class="btn btn-outline-secondary btn-block my-1">PRIME TIME SUPERIM</button>
-            <button type="button" id="menu-4" class="btn btn-outline-secondary btn-block my-1">BREAKFAST BURGER</button>
-            <button type="button" id="menu-5" class="btn btn-outline-secondary btn-block my-1">CONTINENTAL BURGER</button>
-            <button type="button" id="menu-6" class="btn btn-outline-secondary btn-block my-1">AHI TUNA BURGER</button>
-            <button type="button" id="menu-7" class="btn btn-outline-secondary btn-block my-1">THUNDERCLOUD BURGER</button>
-            <button type="button" id="menu-8" class="btn btn-outline-secondary btn-block my-1">IMPOSSIBLE BURGER</button>
-            <button type="button" id="menu-9" class="btn btn-outline-secondary btn-block my-1">SWEET POTATO FRIES</button>
-            <button type="button" id="menu-0" class="btn btn-outline-secondary btn-block my-1">SIDE SALAD</button>
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="devoured">How would you like?</label><br>
-          <input type="radio" name="devoured" value="1"> In a plate!<br>
-          <input type="radio" name="devoured" value="0"> In the box!
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Add My Selection</button>
+          <h3>Burgers</h3>
+          <hr>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">The Classic</button>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Prime Time Superime</button>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Thunder Cloud</button>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Impossible</button>
+          <br><br>
+          <h3>Sides</h3>
+          <hr>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Sweet Potato Fries</button>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Green Salads</button>
+          <br><br>
+          <h3>Drinks</h3>
+          <hr>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Coke</button>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Diet Coke</button>
+          <button class="btn btn-outline-secondary btn-block btn-sm mb-2">Iced Tea</button>
+          <br>
+
+
+          <br>
+          <h3>How would you like?</h3>
+          <hr>
+          <button type="button" class="btn btn-outline-secondary btn-block btn-sm mb-2" value="1">In a Plate?</button>
+          <button type="button" class="btn btn-outline-secondary btn-block btn-sm mb-2" value="0">In a Box?</button>
+          <br><br>
+          <hr>
+          <button type="submit" class="btn btn-primary">Add My Selection</button>
       </form>
       <br>
-      <hr>
-    </div>
-    {{!-- section 2 --}}
-    <div class="col-md-4 p-2">
-      <h1 class="bg-warning p-2 text-center text-light">PLACE IN ORDER</h1>
-      <br>
-        <ul class="list-group">
-          {{#each burgers}}
-            {{#if devoured}}
-              {{> cats/cat-block devoured=false}}
-            {{/if}}
-          {{/each}}
-        </ul>
-    </div>
-    {{!-- section 3 --}}
-    <div class="col-md-4 p-2">
-      <h1 class="bg-success p-2 text-center text-light">READY TO GO</h1>
-      <br>
-        <ul class="list-group">
-          {{#each burgers}}
-            {{#unless devoured}}
-              {{> cats/cat-block devoured=true}}
-            {{/unless}}
-          {{/each}}
-        </ul>
     </div>
   </div>
-
+  {{!-- section 2 --}}
+  <div class="col-md-4 p-2">
+    <h1 class="bg-warning p-2 text-center text-light">PLACE IN ORDER</h1>
+    <br>
+    <ul class="list-group">
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> cats/cat-block devoured=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  {{!-- section 3 --}}
+  <div class="col-md-4 p-2">
+    <h1 class="bg-success p-2 text-center text-light">READY TO GO</h1>
+    <br>
+    <ul class="list-group">
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> cats/cat-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
 
-
-{{!-- <form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured!
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form> --}}
+</div>
