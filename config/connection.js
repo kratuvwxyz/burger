@@ -1,13 +1,15 @@
 // Set up MySQL connection.
-var mysql = require("mysql");
+let mysql = require("mysql2");
 
-var connection = mysql.createConnection({
+/* var connection = mysql.createConnection({
     host: "us-cdbr-iron-east-01.cleardb.net",
     port: 3306,
     user: "bde71e82e38966",
     password: "328dec2d",
     database: "heroku_27bc9d2ff2940aa"
-});
+}); */
+
+connection = mysql.createConnection({ host: "localhost", port: 3306, user: "root", password: "passw0rd", database: "burgers_db" });
 
 // Make connection.
 connection.connect(function(err) {
