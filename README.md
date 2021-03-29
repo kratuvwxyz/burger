@@ -1,6 +1,6 @@
 ## Burger Bar by Desaign Studio
 
-MVC app works with MySQL database using Express and Handlebar.
+MVC app builds with MySQL database, Express Server, Handlebars Framework.
 
 <img src="./SS1.png" alt="Screen Shot" width="500">
 
