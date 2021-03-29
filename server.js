@@ -5,4 +5,4 @@ app.use(express.static(__dirname + "/public")), app.use(express.urlencoded({ ext
 let exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" })), app.set("view engine", "handlebars");
 let routes = require("./controllers/burgerController.js");
-app.use(routes), app.listen(PORT, function () {});
+app.use(routes), app.listen(PORT, function () {`App is running on ${PORT}`});
